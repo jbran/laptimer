@@ -100,7 +100,7 @@
     startClock : function () {
       startTime = new Date().getTime();
       lastLap = startTime;
-      var tickInMilli = 100;
+      var tickInMilli = 78;
       interval = setInterval(laptimer.Watch.updateClock, tickInMilli);
       $("#laps").empty();
     },
