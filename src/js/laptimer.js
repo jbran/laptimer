@@ -60,7 +60,7 @@
       var duration = parseTime(durationTime);
       hour = (duration.hours === 0) ? "" : duration.hours + "h";
       min = (duration.minutes === 0) ? "" : duration.minutes + "m";
-      sec = (duration.seconds === 0) ? "" : duration.seconds + "s ";
+      sec = (duration.seconds === 0) ? "" : duration.seconds + "s";
       mill = zeroPad(duration.millis, 3);
       var durStr = hour + min + sec + "." + mill;
 
