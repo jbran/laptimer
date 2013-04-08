@@ -1,63 +1,61 @@
 body {
-	font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .hide {
-	display: none;
+  display: none;
 }
 
-
 #laptimer {
-	margin: 20px;
-	width: 175px;
+  margin: 20px;
+  width: 175px;
 }
 
 #button-row {
-	border-bottom: 1px solid black;
-	padding-bottom: 7px;
-	margin-bottom: 7px;
+  border-bottom: 1px solid black;
+  padding-bottom: 7px;
+  margin-bottom: 7px;
 }
 
 #button-row button {
-	width: 80px;
-	text-transform: uppercase;
+  width: 80px;
+  text-transform: uppercase;
 }
 
 #button-row #stop-btn {
-	margin-right: 7px;
+  margin-right: 7px;
 }
 
 #timer {
-	font-size: 32px;
-	line-height: 32px;
-
-	display: inline-block;
-	border-bottom: 1px solid black;
-	margin-bottom: 7px;
+  font-size: 32px;
+  line-height: 32px;
+  display: inline-block;
+  border-bottom: 1px solid black;
+  margin-bottom: 7px;
 }
 
 #timer span {
-	display: inline-block;
+  display: inline-block;
 }
 
 #timer .milli {
-	font-size: 20px;
-	line-height: 32px;
+  font-size: 20px;
+  line-height: 32px;
 }
 
 #laps .record {
-	padding: 7px;
-	margin-bottom: 7px;
-	display: none;
-	background-color: #fcf8e3;
-	border-radius: 10px;
+  padding: 7px;
+  margin-bottom: 7px;
+  display: none;
+  background-color: #fcf8e3;
+  border-radius: 10px;
 }
 
 #laps .lap {
-	display: block;
-	font-size: 19px;
+  display: block;
+  font-size: 19px;
 }
 
 #laps .duration {
-	text-align: right;
+  text-align: right;
 }
