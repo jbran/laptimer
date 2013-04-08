@@ -1,5 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
+  width: 320px;
 }
 
 .hide {
@@ -7,7 +8,7 @@ body {
 }
 
 #laptimer {
-  margin: 20px;
+  margin: auto;
   width: 175px;
 }
 
@@ -52,10 +53,11 @@ body {
 }
 
 #laps .lap {
-  display: block;
+  display: inline-block;
   font-size: 19px;
 }
 
 #laps .duration {
   text-align: right;
+  float: right;
 }
