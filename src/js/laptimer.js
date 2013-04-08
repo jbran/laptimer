@@ -1,5 +1,5 @@
 (function (laptimer, $, undefined) {
-  var interval, startTime, lastLap;
+  var interval, startTime, lastLap, lapCount;
 
   var HOUR = 1000 * 60 * 60;
   var MIN  = 1000 * 60;
@@ -50,11 +50,11 @@
     lapHandler : function () {
       
       var elapsed = laptimer.Watch.getElapsed();
-      var hour = zeroPad(elapsed.hours, 2);
-      var min = zeroPad(elapsed.minutes, 2);
-      var sec = zeroPad(elapsed.seconds, 2);
-      var mill = zeroPad(elapsed.millis, 3);
-      var timeStr = hour + ":" + min + ":" + sec + "." + mill;
+      // var hour = zeroPad(elapsed.hours, 2);
+      // var min = zeroPad(elapsed.minutes, 2);
+      // var sec = zeroPad(elapsed.seconds, 2);
+      // var mill = zeroPad(elapsed.millis, 3);
+      // var timeStr = hour + ":" + min + ":" + sec + "." + mill;
 
       var durationTime = elapsed.time - lastLap;
       var duration = parseTime(durationTime);
@@ -64,14 +64,16 @@
       mill = zeroPad(duration.millis, 3);
       var durStr = hour + min + sec + "." + mill;
 
-      $("#laps").append(
+      $("#laps").prepend(
           "<div class='record'>" +
-          "<span class='lap'>" + timeStr + "</span>" +
+          // "<span class='lap'>" + timeStr + "</span>" +
+          "<span class='lap'>lap " + lapCount + "</span>" +
           "<span class='lap duration'>" + durStr + "</span>" +
           "</div>"
         );
-      $("#laps .record:last").fadeIn("slow");
+      $("#laps .record:first").fadeIn("slow");
       lastLap = elapsed.time;
+      lapCount += 1;
     },
 
     stopHandler : function () {
@@ -98,6 +100,7 @@
     },
 
     startClock : function () {
+      lapCount = 0;
       startTime = new Date().getTime();
       lastLap = startTime;
       var tickInMilli = 78;
