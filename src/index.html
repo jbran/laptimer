@@ -1,32 +1,28 @@
 <html>
-	<head>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/laptimer.css" />
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/laptimer.css" />
 
-		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-		<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-		<script src="js/laptimer.js"></script>
-	</head>
-	<body>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
+    <script src="js/laptimer.js"></script>
+  </head>
+  <body>
+    <div id="laptimer">
+      <div id="timer" class="time">
+        <span class="hour">00</span>:<span class="minute">00</span>:<span class="second">00</span>.<span class="milli">000</span>
+      </div>
 
-		<div id="laptimer">
+      <div id="button-row">
+        <button id="stop-btn" type="button" class="btn btn-inverse">Stop</button>
+        <button id="start-btn" type="button" class="btn btn-success">Start</button>
+        <button id="lap-btn" type="button" class="btn btn-info hide">Lap</button>
+      </div>
 
-			<div id="timer" class="time">
-				<span class="hour">00</span>:<span class="minute">00</span>:<span class="second">00</span>.<span class="milli">000</span>
-			</div>
-
-			<div id="button-row">
-				<button id="stop-btn" type="button" class="btn btn-inverse">Stop</button>
-				<button id="start-btn" type="button" class="btn btn-success">Start</button>
-				<button id="lap-btn" type="button" class="btn btn-info hide">Lap</button>
-			</div>
-
-			<div id="laps">
-			</div>
-
-		</div>
-
-	</body>
+      <div id="laps"></div>
+    </div>
+  </body>
 </html>
