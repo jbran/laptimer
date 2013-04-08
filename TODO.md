@@ -1,0 +1,2 @@
+- Get rid of bootstrap, just make own buttons
+- Write tests, yay!
